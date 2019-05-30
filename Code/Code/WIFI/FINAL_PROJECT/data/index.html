@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toggle LED</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="navbar-brand" href="/">
+        <img src="ioT.svg" alt="logo" width="50"><span> Home IoT</span>
+      </a>
+    </nav>
+    <main class="main">
+      <span id="error"></span>
+      <section class="controls">
+        <label id="ledcurrstatus" class="ledcurrstatus"></label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="swled" />
+          <span class="toggle round"></span>
+        </label>
+        <label>LED</label>
+        <div class="slidecontainer">
+          <p>LED Intensity : <span id="ledlevel"></span></p>
+          <input type="range" min="0" max="100" value="25" class="slider" id="leddimmerlevel" step="5" />
+        </div>
+      </section>
+      <section class="controls">
+        <label id="fancurrstatus" class="ledcurrstatus"></label>
+        <br />
+        <label class="switch">
+          <input type="checkbox" id="swfan" />
+          <span class="toggle round"></span>
+        </label>
+        <label>FAN</label>
+        <div class="slidecontainer">
+          <p>FAN Speed : <span id="fanlevel"></span></p>
+          <input type="range" min="0" max="100" value="50" class="slider" id="fanspeedlevel" step="5" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
